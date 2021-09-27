@@ -11,10 +11,6 @@ const service = axios.create(
         // url = base url + request url
         //本地
         baseURL: "http://127.0.0.1:8089",
-
-        //线上   端口443不需写  kim1
-        // baseURL: "https://www.tomorrowcat.com:88",
-        // request timeout
         timeout: 5000
     }
 )
