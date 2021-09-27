@@ -1,4 +1,7 @@
 # online_class_front
+#这是视频网站的前端部分，需要配合后端一起使用
+#项目的具体部署方式请参看后端项目中的README，里面有详细的操作步骤
+#后端项目地址：https://github.com/skyinfant/9-online_class
 
 ## Project setup
 ```
