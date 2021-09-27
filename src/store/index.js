@@ -5,11 +5,28 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    token: localStorage.getItem('token') || ''
   },
+
+  //同步修改state的值
   mutations: {
+    SET_TOKEN: (state, token) => {
+      state.token = token
+    }
   },
+
+  //异步调用mutations里的方法修改state的值
+  //context.commit 利用上下文触发mutations某个方法
+  //vue代码里面 this.$store.dispatch 触发 action里面定义的方法
   actions: {
+    setToken(context, token) {
+      //在setToken里调用mutations里的SET_TOKEN
+      context.commit('SET_TOKEN', token)
+    },
+
+    clearToken(context) {
+      context.commit('SET_TOKEN', '')
+    }
   },
-  modules: {
-  }
+
 })
